@@ -6,7 +6,7 @@ function getHTML (options, callback) {
     https.get(options, function (response) {
       
         response.setEncoding('utf8');
-        var buffer = ''
+            var buffer = ''
         
         response.on('data', function (data) {
             buffer += data;
@@ -25,12 +25,12 @@ function getHTML (options, callback) {
 
 function printHTML (html) {
     console.log('HELLO');
-  console.log(html);
+    console.log(html);
 }
 
 var requestOptions = {
-  host: 'sytantris.github.io',
-  path: '/http-examples/step4.html'
+    host: 'sytantris.github.io',
+    path: '/http-examples/step4.html'
 };    
 
 getHTML(requestOptions, printHTML);
